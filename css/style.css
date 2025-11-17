@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root{
+    --primary-teal-500: hsl(179, 62%, 47%); 
+    --primary-teal-600: hsl(179, 61%, 50%);
+    --primary-green-400: hsl(71, 73%, 54%); 
+
+    --neutral-teal-100: hsl(204, 43%, 93%);
+    --neutral-teal-200: hsla(203, 44%, 93%, 0.848);
+    --neutral-teal-300: hsla(203, 44%, 93%, 0.693);
+    --neutral-gray-500: hsl(218, 22%, 67%);
+
+    --fontsize: 1.1rem;
+    --font-fam: "Karla";
+    --fw-400: 400; 
+    --fw-700: 700; 
+
+    --h1: clamp(1.3rem, 1.265rem + 0.15vw, 1.4rem); 
+    --h2: clamp(1rem, 0.8rem + 0.15vw, 1.1rem); 
+    --p : clamp(0.9rem, 0.8rem + 0.15vw, 1rem); 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    background-color: var(--neutral-teal-100);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    font-family: var(--font-fam);
+}
+.card-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem;
+}   
+.card-top{
+    background-color: #fff;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    padding: 1rem;
+}
+.card-top h1{
+    font-size: var(--h1);
+    color: var(--primary-teal-500);
+    margin-block-start: 0.5rem;
+}
+.card-top h2{
+    font-size: var(--h2);
+    color: var(--primary-green-400);
+    font-weight: var(--fw-700);
+    margin: 1rem 0rem;
+}
+.card-top p{
+    font-size: var(--p);
+    color: var(--neutral-gray-500);
+    font-weight: var(--fw-400);
+    margin: 0.5rem 0rem 1rem 0rem;
+}
+.card-bottom{
+    width: 100%;
+    height: auto;
+}
+.card-b-left{
+    background-color: var(--primary-teal-500);
+    padding: 1rem;
+}
+.card-b-left h2{
+    color: var(--neutral-teal-100);
+    font-size: var(--h2);
+    padding-block-end: 0.5rem;
+}
+.card-b-left .text-first{
+    color: var(--neutral-teal-100);
+    font-size: 1.8rem;
+    font-weight: var(--fw-700);
+    display: flex;
+    align-items: center;
+}
+.card-b-left .text-first span{
+    color: var(--neutral-teal-300);
+    font-size: 1rem;
+    font-weight: var(--fw-400);
+    margin-inline-start: 0.6rem;
+}
+.card-b-left .text-second{
+    color: var(--neutral-teal-200);
+    font-size: var(--p);
+    font-weight: var(--fw-400);
+}
+.card-b-left button{
+    padding: 1rem;
+    width: 100%;
+    height: auto;
+    margin-block-start: 1rem;
+    margin-block-end: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-family: var(--font-fam);
+    font-weight: var(--fw-700);
+    color: var(--neutral-teal-100);
+    background-color: var(--primary-green-400);
+    font-size: var(--p);
+}
+.card-b-right{
+    background-color: var(--primary-teal-600);
+    padding: 1rem;
+}
+.card-b-right h2{
+    color: var(--neutral-teal-100);
+    font-size: var(--h2);
+    padding-block-end: 0.5rem;
+}
+.card-b-right ul li{
+    list-style: none;
+    color: var(--neutral-teal-300);
+    font-size: var(--p);
+}
+
+@media (min-width:60rem ){
+    .card-section{
+        width: 50%;
+        box-shadow: 2px 2px 20px var(--neutral-gray-500);
+    }
+    .card-bottom{
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+    }
+    .card-b-left, .card-b-right{
+        flex: 1;
+        padding: 1.2rem;
+    }
+
+}
